@@ -142,7 +142,12 @@ $(document).ready(function () {
 
     })
     document.addEventListener('touchstart',function (event) {
-       
+       if (event.cancelable) {
+            // 判断默认行为是否已经被禁用
+            if (!event.defaultPrevented) {
+                event.preventDefault();
+            }
+        }
         touchstartX=event.touches[0].pageX;
         touchstartY=event.touches[0].pageY;
     })
