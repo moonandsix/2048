@@ -1,6 +1,25 @@
 /**
  * Created by Administrator on 2017/7/26.
  */
+var supportsPassive = false;
+try {
+  var opts = Object.defineProperty({}, 'passive', {
+    get: function() {
+      supportsPassive = true;
+    }
+  });
+  window.addEventListener("test", null, opts);
+} catch (e) {}
+
+// Use our detect's results. 
+// passive applied if supported, capture will be false either way.
+elem.addEventListener(
+  'touchstart',
+  fn,
+  supportsPassive ? { passive: true } : false
+);
+
+
 function createNumber() {//创建一个新的数字并且放入data中
     if (hasSpace()){
         var number=Math.random()>0.5?4:2
