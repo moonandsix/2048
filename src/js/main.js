@@ -1,6 +1,17 @@
 /**
  * Created by Administrator on 2017/7/26.
  */
+var supportsPassive = false;
+try {
+    var opts = Object.defineProperty({}, 'passive', {
+        get: function() {
+            supportsPassive = true;
+        }
+    });
+    window.addEventListener("test", null, opts);
+} catch (e) {}
+
+
 function createNumber() {//创建一个新的数字并且放入data中
     if (hasSpace()){
         var number=Math.random()>0.5?4:2
@@ -144,7 +155,7 @@ $(document).ready(function () {
     document.addEventListener('touchstart',function (event) {
         touchstartX=event.touches[0].pageX;
         touchstartY=event.touches[0].pageY;
-    })
+    },{passive:true})
     document.addEventListener('touchend',function (event) {
         touchendX=event.changedTouches[0].pageX;
         touchendY=event.changedTouches[0].pageY;
