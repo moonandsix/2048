@@ -3,7 +3,6 @@
  */
 var supportsPassive = false;
 try {
-<<<<<<< HEAD
     var opts = Object.defineProperty({}, 'passive', {
         get: function() {
             supportsPassive = true;
@@ -12,24 +11,6 @@ try {
     window.addEventListener("test", null, opts);
 } catch (e) {}
 
-=======
-  var opts = Object.defineProperty({}, 'passive', {
-    get: function() {
-      supportsPassive = true;
-    }
-  });
-  window.addEventListener("test", null, opts);
-} catch (e) {}
-
-// Use our detect's results. 
-// passive applied if supported, capture will be false either way.
-// elem.addEventListener(
-//   'touchstart',
-//   fn,
-//   supportsPassive ? { passive: true } : false
-// );
-
->>>>>>> fdafb9897254e0e7ac008003bacc3a93cc25b162
 
 function createNumber() {//创建一个新的数字并且放入data中
     if (hasSpace()){
@@ -172,12 +153,10 @@ $(document).ready(function () {
 
     })
     document.addEventListener('touchstart',function (event) {
-
         touchstartX=event.touches[0].pageX;
         touchstartY=event.touches[0].pageY;
     },{passive:true})
     document.addEventListener('touchend',function (event) {
-       
         touchendX=event.changedTouches[0].pageX;
         touchendY=event.changedTouches[0].pageY;
         var offsetX=touchendX-touchstartX;
