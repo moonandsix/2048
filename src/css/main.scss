@@ -1,0 +1,249 @@
+
+body{
+  margin: 80px 0;
+  padding: 0;
+  background: #faf8ef;
+  color: #776e65;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+}
+.container{
+  width: 500px;
+  margin: 0 auto;
+  .header{
+    width: 100%;
+    .title{
+      width: 100%;
+      h1{
+        font-size: 4.44rem;
+        font-weight: bold;
+        margin: 0;
+        display: block;
+        float: left;
+      }
+      .best,.score{
+        float: right;
+        background: #bbada0;
+        padding: 15px 25px;
+        font-size: 25px;
+        height: 25px;
+        line-height: 47px;
+        font-weight: bold;
+        border-radius: 3px;
+        color: white;
+        margin-top: 8px;
+        text-align: center;
+        margin-right: 5px;
+        position: relative;
+      }
+      .best:after,.score:after{
+        position: absolute;
+        width: 100%;
+        top: 10px;
+        left: 0;
+        text-transform: uppercase;
+        font-size: 13px;
+        line-height: 13px;
+        text-align: center;
+        color: #eee4da;
+      }
+      .best:after{
+        content:'best';
+      }
+      .score:after{
+        content:'score';
+      }
+    }
+    .newGame{
+      width: 100%;
+      margin:20px 0;
+      h4{
+        float: left;
+        margin: 0;
+        line-height: 42px;
+      }
+      #btn{
+        cursor: pointer;
+      }
+      .btn{
+        float: right;
+        background: #8f7a66;
+        border-radius: 3px;
+        padding: 0 20px;
+        text-decoration: none;
+        color: #f9f6f2;
+        height: 40px;
+        line-height: 42px;
+        text-align: center;
+      }
+    }
+  }
+  .main{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    .grid-container{
+      background-color: #bbada0;
+      width:100%;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 15px;
+      border-radius: 6px;
+      .grid-row{
+        width: 100%;
+        height: 106.25px;
+        margin-bottom: 15px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        &:after{
+          conten:'';
+          display: table;
+          clear:both;
+        }
+        .grid-cell{
+          float: left;
+          width: 106.25px;
+          height: 106.25px;
+          margin-right: 15px;
+          border-radius: 3px;
+          background: rgba(238, 228, 218, 0.35);
+          &:last-child{
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .cell-container{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      .cell{
+        position: absolute;
+        border-radius: 3px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 55px;
+        line-height: 106.25px;
+      }
+    }
+    .gameOver-modal{
+      position: absolute;
+      display: none;
+      z-index: 100;
+      top:0;
+      left:0;
+      right: 0;
+      bottom: 0;
+      text-align: center;
+      background-color: rgba(238, 228, 218, 0.5);
+      .gameOver-title{
+        font-size: 60px;
+        font-weight: bold;
+        height: 60px;
+        line-height: 60px;
+        margin-top: 222px;
+        text-align: center;
+      }
+      #restart{
+        display: inline-block;
+        background: #8f7a66;
+        border-radius: 3px;
+        padding: 0 20px;
+        text-decoration: none;
+        color: #f9f6f2;
+        height: 40px;
+        line-height: 42px;
+        margin-left: 9px;
+      }
+    }
+  }
+}
+@media screen and (max-device-width: 520px){
+  body{
+    margin: 20px 0;
+    padding: 0 20px;
+    font-size: 15px;
+  }
+  .container{
+    width: 280px;
+    margin: 0 auto;
+    .header{
+      .title{
+        margin-bottom: 10px;
+        h1{
+          font-size: 27px;
+          margin-top: 15px;
+        }
+        .best{
+
+        }
+      }
+      .newGame{
+        h4{
+          width: 55%;
+          display: block;
+          box-sizing: border-box;
+          line-height: 1.65;
+        }
+        .btn{
+          width: 42%;
+          padding: 0;
+          display: block;
+          box-sizing: border-box;
+          margin-top: 2px;
+        }
+      }
+
+    }
+    .main{
+      background: #bbada0;
+      border-radius: 6px;
+      width: 280px;
+      height: 280px;
+      margin-top: 17px;
+      position: relative;
+      cursor: default;
+      box-sizing: border-box;
+      .grid-container{
+        padding: 10px;
+        .grid-row{
+          margin-bottom: 10px;
+          width: 260px;
+          height: 57.5px;
+          .grid-cell{
+            width: 57.5px;
+            height: 57.5px;
+            margin-right: 10px;
+          }
+        }
+      }
+      .cell-container{
+        padding: 0;
+        .cell{
+          font-size: 35px;
+          line-height: 57.5px;
+        }
+      }
+      .gameOver-modal{
+        .gameOver-title{
+          font-size: 30px;
+          height: 30px;
+          line-height: 30px;
+          margin-top: 90px;
+        }
+        #restart{
+          display: inline-block;
+          background: #8f7a66;
+          border-radius: 3px;
+          padding: 0 20px;
+          text-decoration: none;
+          color: #f9f6f2;
+          height: 40px;
+          line-height: 42px;
+          margin-left: 9px;
+        }
+      }
+    }
+  }
+}

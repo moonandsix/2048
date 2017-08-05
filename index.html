@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>练习</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/fonts/clear-sans.css">
+    <link rel="stylesheet" href="src/css/toolStyle.css">
+    <script src="src/js/support.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header clearFix">
+            <div class="title clearFix">
+                <h1>2048</h1>
+                <div class="best">0</div>
+                <div class="score">
+                    <div class="score-content">0</div>
+                    <div class="addAnimation"></div>
+                </div>
+            </div>
+            <div class="newGame clearFix">
+                <h4>Join the numbers and get to the <strong>2048 tile!</strong></h4>
+                <a id="btn" class="btn">开始游戏</a>
+            </div>
+        </div>
+        <div class="main">
+            <div class="cell-container"></div>
+            <div class="grid-container">
+                <div class="grid-row" id="row-0">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row" id="row-1">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row" id="row-2">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row" id="row-3">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+            </div>
+            <div class="gameOver-modal">
+                <h1 class="gameOver-title">Game over</h1>
+                 <a href="#" id="restart">再来一次</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="src/js/main.js"></script>
+</html>

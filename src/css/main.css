@@ -1,0 +1,203 @@
+body {
+  margin: 80px 0;
+  padding: 0;
+  background: #faf8ef;
+  color: #776e65;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px; }
+
+.container {
+  width: 500px;
+  margin: 0 auto; }
+  .container .header {
+    width: 100%; }
+    .container .header .title {
+      width: 100%; }
+      .container .header .title h1 {
+        font-size: 4.44rem;
+        font-weight: bold;
+        margin: 0;
+        display: block;
+        float: left; }
+      .container .header .title .best, .container .header .title .score {
+        float: right;
+        background: #bbada0;
+        padding: 15px 25px;
+        font-size: 25px;
+        height: 25px;
+        line-height: 47px;
+        font-weight: bold;
+        border-radius: 3px;
+        color: white;
+        margin-top: 8px;
+        text-align: center;
+        margin-right: 5px;
+        position: relative; }
+      .container .header .title .best:after, .container .header .title .score:after {
+        position: absolute;
+        width: 100%;
+        top: 10px;
+        left: 0;
+        text-transform: uppercase;
+        font-size: 13px;
+        line-height: 13px;
+        text-align: center;
+        color: #eee4da; }
+      .container .header .title .best:after {
+        content: 'best'; }
+      .container .header .title .score:after {
+        content: 'score'; }
+    .container .header .newGame {
+      width: 100%;
+      margin: 20px 0; }
+      .container .header .newGame h4 {
+        float: left;
+        margin: 0;
+        line-height: 42px; }
+      .container .header .newGame #btn {
+        cursor: pointer; }
+      .container .header .newGame .btn {
+        float: right;
+        background: #8f7a66;
+        border-radius: 3px;
+        padding: 0 20px;
+        text-decoration: none;
+        color: #f9f6f2;
+        height: 40px;
+        line-height: 42px;
+        text-align: center; }
+  .container .main {
+    width: 500px;
+    height: 500px;
+    position: relative; }
+    .container .main .grid-container {
+      background-color: #bbada0;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 15px;
+      border-radius: 6px; }
+      .container .main .grid-container .grid-row {
+        width: 100%;
+        height: 106.25px;
+        margin-bottom: 15px; }
+        .container .main .grid-container .grid-row:last-child {
+          margin-bottom: 0; }
+        .container .main .grid-container .grid-row:after {
+          conten: '';
+          display: table;
+          clear: both; }
+        .container .main .grid-container .grid-row .grid-cell {
+          float: left;
+          width: 106.25px;
+          height: 106.25px;
+          margin-right: 15px;
+          border-radius: 3px;
+          background: rgba(238, 228, 218, 0.35); }
+          .container .main .grid-container .grid-row .grid-cell:last-child {
+            margin-right: 0; }
+    .container .main .cell-container {
+      position: absolute;
+      width: 100%;
+      height: 100%; }
+      .container .main .cell-container .cell {
+        position: absolute;
+        border-radius: 3px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 55px;
+        line-height: 106.25px; }
+    .container .main .gameOver-modal {
+      position: absolute;
+      display: none;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-align: center;
+      background-color: rgba(238, 228, 218, 0.5); }
+      .container .main .gameOver-modal .gameOver-title {
+        font-size: 60px;
+        font-weight: bold;
+        height: 60px;
+        line-height: 60px;
+        margin-top: 222px;
+        text-align: center; }
+      .container .main .gameOver-modal #restart {
+        display: inline-block;
+        background: #8f7a66;
+        border-radius: 3px;
+        padding: 0 20px;
+        text-decoration: none;
+        color: #f9f6f2;
+        height: 40px;
+        line-height: 42px;
+        margin-left: 9px; }
+
+@media screen and (max-device-width: 520px) {
+  body {
+    margin: 20px 0;
+    padding: 0 20px;
+    font-size: 15px; }
+
+  .container {
+    width: 280px;
+    margin: 0 auto; }
+    .container .header .title {
+      margin-bottom: 10px; }
+      .container .header .title h1 {
+        font-size: 27px;
+        margin-top: 15px; }
+    .container .header .newGame h4 {
+      width: 55%;
+      display: block;
+      box-sizing: border-box;
+      line-height: 1.65; }
+    .container .header .newGame .btn {
+      width: 42%;
+      padding: 0;
+      display: block;
+      box-sizing: border-box;
+      margin-top: 2px; }
+    .container .main {
+      background: #bbada0;
+      border-radius: 6px;
+      width: 280px;
+      height: 280px;
+      margin-top: 17px;
+      position: relative;
+      cursor: default;
+      box-sizing: border-box; }
+      .container .main .grid-container {
+        padding: 10px; }
+        .container .main .grid-container .grid-row {
+          margin-bottom: 10px;
+          width: 260px;
+          height: 57.5px; }
+          .container .main .grid-container .grid-row .grid-cell {
+            width: 57.5px;
+            height: 57.5px;
+            margin-right: 10px; }
+      .container .main .cell-container {
+        padding: 0; }
+        .container .main .cell-container .cell {
+          font-size: 35px;
+          line-height: 57.5px; }
+      .container .main .gameOver-modal .gameOver-title {
+        font-size: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 90px; }
+      .container .main .gameOver-modal #restart {
+        display: inline-block;
+        background: #8f7a66;
+        border-radius: 3px;
+        padding: 0 20px;
+        text-decoration: none;
+        color: #f9f6f2;
+        height: 40px;
+        line-height: 42px;
+        margin-left: 9px; } }
+
+/*# sourceMappingURL=main.css.map */
