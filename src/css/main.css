@@ -148,8 +148,12 @@ body {
     .container .header .title {
       margin-bottom: 10px; }
       .container .header .title h1 {
-        font-size: 27px;
+        font-size: 30px;
         margin-top: 15px; }
+      .container .header .title .best {
+        font-size: 20px; }
+      .container .header .title .score {
+        font-size: 20px; }
     .container .header .newGame h4 {
       width: 55%;
       display: block;
@@ -183,7 +187,7 @@ body {
       .container .main .cell-container {
         padding: 0; }
         .container .main .cell-container .cell {
-          font-size: 35px;
+          font-size: 25px;
           line-height: 57.5px; }
       .container .main .gameOver-modal .gameOver-title {
         font-size: 30px;

@@ -173,11 +173,14 @@ body{
       .title{
         margin-bottom: 10px;
         h1{
-          font-size: 27px;
+          font-size: 30px;
           margin-top: 15px;
         }
         .best{
-
+          font-size: 20px;
+        }
+        .score{
+          font-size: 20px;
         }
       }
       .newGame{
@@ -222,7 +225,7 @@ body{
       .cell-container{
         padding: 0;
         .cell{
-          font-size: 35px;
+          font-size: 25px;
           line-height: 57.5px;
         }
       }
