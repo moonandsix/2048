@@ -13,11 +13,11 @@ try {
 
 // Use our detect's results. 
 // passive applied if supported, capture will be false either way.
-elem.addEventListener(
-  'touchstart',
-  fn,
-  supportsPassive ? { passive: true } : false
-);
+// elem.addEventListener(
+//   'touchstart',
+//   fn,
+//   supportsPassive ? { passive: true } : false
+// );
 
 
 function createNumber() {//创建一个新的数字并且放入data中
