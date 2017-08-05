@@ -10,7 +10,7 @@ try {
     });
     window.addEventListener("test", null, opts);
 } catch (e) {}
-
+//////////////1
 
 function createNumber() {//创建一个新的数字并且放入data中
     if (hasSpace()){
