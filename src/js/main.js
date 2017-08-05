@@ -148,6 +148,7 @@ $(document).ready(function () {
                 event.preventDefault();
             }
         }
+        event.preventDefault();
         touchstartX=event.touches[0].pageX;
         touchstartY=event.touches[0].pageY;
     })
