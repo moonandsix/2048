@@ -142,16 +142,10 @@ $(document).ready(function () {
 
     })
     document.addEventListener('touchstart',function (event) {
-       if (event.cancelable) {
-            // 判断默认行为是否已经被禁用
-            if (!event.defaultPrevented) {
-                event.preventDefault();
-            }
-        }
-        event.preventDefault();
+
         touchstartX=event.touches[0].pageX;
         touchstartY=event.touches[0].pageY;
-    })
+    },{passive:true})
     document.addEventListener('touchend',function (event) {
        
         touchendX=event.changedTouches[0].pageX;
